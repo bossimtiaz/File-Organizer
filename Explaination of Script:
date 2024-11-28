@@ -1,0 +1,15 @@
+for %%a in (“.\*”) do (
+
+if “%%~xa” NEQ “” if “%%~dpxa” NEQ “%~dpx0” (
+
+This line of code will check for an extension on Each file on the particular folder and if the extension is not there it will mark the file as a separate file.
+
+if not exist “%%~xa” mkdir “%%~xa”
+
+This line of code will create a extension folder and check the extension folder exists.
+
+move “%%a” “%%~dpa%%~xa\”
+
+This line of code will move the files to the respective directory.
+
+You can use this batch file in system partitions, folders, External Hard Disk, and USB Pen Drive.
